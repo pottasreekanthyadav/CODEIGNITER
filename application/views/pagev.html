@@ -1,0 +1,27 @@
+<table border="2">
+	<tr>
+		<th>S.NO</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>Mobile</th>
+	</tr>
+	
+	
+		<?php
+
+foreach($recs->result() as $row){
+	?>
+	
+<tr>
+	<td><?php  echo $row->sno?></td>
+	<td><?php  echo $row->name?></td>
+	<td><?php  echo $row->email?></td>
+	<td><?php  echo $row->password?></td>
+	<td><?php  echo $row->mobile?></td>
+</tr>
+	<?php
+}
+?>	
+</table>
+<?php echo $link; ?>

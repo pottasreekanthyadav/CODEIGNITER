@@ -1,0 +1,43 @@
+<h1>Welcome to my page</h1>
+<table border="2">
+	<tr>
+		<th>Sno</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>Mobile</th>
+		<th>Action</th>
+	</tr>
+
+<?php
+$c=$res->num_rows();
+if($c>0){
+	foreach($res->result() as $row){
+	?>
+
+
+<tr>
+	<td><?php echo $row->sno ?></td>
+	<td><?php echo $row->name ?></td>
+	<td><?php echo $row->email ?></td>
+	<td><?php echo $row->password?></td>
+	<td><?php echo $row->mobile?></td>
+	<td><a href="<?php echo site_url().'/regc/delete/'.$row->sno?>">Dellete</a>||
+	<a href="<?php echo site_url().'/regc/update/'.$row->sno?>">Update</a>||
+
+
+	</td>
+</tr>
+
+	<?php
+}
+}
+else{
+	?>
+
+<tr><td colspan="5">No Records Are Found</td></tr>
+	<?php
+}
+?>
+</table>
+

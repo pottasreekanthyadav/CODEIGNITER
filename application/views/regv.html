@@ -1,0 +1,30 @@
+<p style="color:green">
+<?php
+if(isset($suc)){
+	echo "Inserted Succssfully";
+}
+
+?>
+</p>
+
+<p style="color:red">
+<?php
+if(isset($fail)){
+	echo "Inserted Succssfully";
+}
+
+?>
+</p>
+
+<form method="post" action="<?php echo site_url().'/regc/readdata' ?>">
+	Name:<input type="text"  name="name" value="<?php echo set_value('name') ?>">
+	<?php echo form_error('name');  ?><br>
+	Email1:<input type="text" name="email" value="<?php echo set_value('email') ?>">
+	<?php echo form_error('email');  ?>
+	<br>
+Password:<input type="password" name="password" value="<?php echo set_value('password')?>"><br>
+
+	Mobile:<input type="text" name="mobile" value="<?php echo set_value('mobile'); ?>"><br>
+	<input type="submit" name="register" value="Register"><br>
+
+</form>

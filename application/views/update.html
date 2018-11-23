@@ -1,0 +1,12 @@
+<?php
+$row=$res->row();
+$uid=$this->uri->segment(3);
+?>
+<form method="post" action="<?php echo site_url().'/regc/readupdate/'.$uid ?>">
+	Name:<input type="text" name="name" value="<?php echo $row->name ?>"><br>
+	Email:<input type="text" name="email" value="<?php echo $row->email ?>"><br>
+	Password:<input type="text" name="password" value="<?php echo $row->password ?>"><br>
+	Mobile:<input type="text" name="mobile" value="<?php echo $row->mobile ?>"><br>
+	<input type="submit" value="Update" name="update">
+	
+</form>
